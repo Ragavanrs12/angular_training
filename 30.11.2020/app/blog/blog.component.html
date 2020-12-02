@@ -1,0 +1,12 @@
+<div style="padding: 20px;">
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" type="text" class="form-control" [(ngModel)]="email"> {{email}}
+
+    <label for="comment"><b>comment</b></label>
+    <!-- <textarea type="tel" placeholder="mobile no" name="mobile" class="form-control" [(ngModel)]="comment"> -->
+    <textarea type="text" class="form-control " rows="3" cols="6" name="comment" style="width: 1500px;" [(ngModel)]="comment" required></textarea> {{comment}}
+    <br>
+    <br>
+    <button name="submit" (click)="submitnow()">submit here</button>
+
+</div>
