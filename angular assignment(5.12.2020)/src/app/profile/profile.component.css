@@ -1,0 +1,123 @@
+[class*="col-sm"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+}
+
+table,
+tr,
+td {
+    border-top: 0px;
+}
+
+#a1 {
+    border: 1px solid rgba(83, 80, 80, 0.945);
+    background-color: rgb(231, 231, 229);
+    /* padding: 20px; */
+    text-align: center;
+    border-radius: 10px;
+}
+
+#a2 {
+    border: 1px solid rgba(83, 80, 80, 0.945);
+    background-color: rgb(230, 228, 225);
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+#a5 {
+    border: 1px solid rgba(83, 80, 80, 0.945);
+    background-color: rgb(230, 228, 225);
+    text-align: center;
+    padding-top: 10px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.primary {
+    background-color: brown;
+    color: white;
+    border-radius: 10%;
+}
+
+#a6 {
+    padding: 10px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* #a3 {
+    padding-left: 20px;
+} */
+
+#a4 {
+    text-align: center;
+}
+
+#a8 {
+    text-align: right;
+}
+
+#a9 {
+    background-color: rgb(156, 238, 183);
+    border-top: rgb(156, 238, 183);
+}
+
+#a7 {
+    border: 1px solid rgb(5, 133, 58);
+    background-color: rgb(156, 238, 183);
+    text-align: center;
+    color: rgba(22, 182, 70, 0.979);
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+#img2 {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
