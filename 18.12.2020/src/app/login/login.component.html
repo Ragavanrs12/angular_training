@@ -1,0 +1,34 @@
+<div id="a1">
+    <h1>login form</h1>
+</div>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+
+
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <!-- Tabs Titles -->
+
+                <!-- Icon -->
+                <br>
+                <br>
+                <div class="fadeIn first">
+
+                </div>
+
+                <!-- Login Form -->
+                <form #myForm="ngForm" (submit)="onSubmit(myForm.value)">
+                    <input type="email" id="login" class="fadeIn second" placeholder="email" name="email" ngModel [email]="true" required [(ngModel)]="email">
+
+                    <input type="text" id="password" class="fadeIn third" name="password" placeholder="password" ngModel [(ngModel)]="password">
+                    <input type="submit" [disabled]="myForm.invalid" class="fadeIn fourth" value="Log In">
+                </form>
+                <div *ngIf="valid" class="fadeIn fourth" style="border: 2px solid red;margin:10px;background-color: rgb(144, 183, 216);border-radius: 4%;">
+                    <h4>Email or password invalid</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

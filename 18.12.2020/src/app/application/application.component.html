@@ -1,0 +1,36 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+
+
+        <div class="fadeIn first">
+            <h3>Application form Submitted </h3>
+            <h3>thanks for submitting </h3>
+            <h3 *ngFor="let models of model">
+
+                <a>{{models.firstName }} {{models.lastName}}</a>
+                <button type="button" class="btn btn-primary" (click)="form()">show form</button>
+            </h3>
+
+            <h5 style="text-align:center;"><a [routerLink]="['/naukri']" routerLinkActive="router-link-active">click to continue</a></h5>
+        </div>
+
+        <!-- Login Form -->
+
+
+        <!-- Remind Passowrd -->
+
+
+    </div>
+</div>
+<br>
+<br>
+<br>
+<router-outlet></router-outlet>

@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" [routerLink]="['/naukri']" routerLinkActive="router-link-active">Naukri</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link"> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true"></a>
+            </li>
+        </ul>
+        <div class=" my-2 my-lg-0">
+            <input class="form-control mr-sm-2" [(ngModel)]="search" placeholder="Search">
+
+        </div>
+    </div>
+</nav>
+
+
+<div class="a1" *ngFor="let company of details | filter : search">
+    <div class="card" appHost>
+        <div class="card-body">
+            <table width="100%">
+                <tr>
+                    <td style="width:20%"><img id="img1" src="{{company.img}}" title="logo"></td>
+                    <td style="width:20%">company:{{company.name}}</td>
+                    <td style="width:20%">vacancy:{{company.vacancy}}</td>
+                    <td style="width:20%;text-align:left;">Keywords:{{company.keyword}}</td>
+                    <td style="width:10%"><button type="button" class="btn btn-primary" (click)="onApply(company)">Apply Now</button></td>
+
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>

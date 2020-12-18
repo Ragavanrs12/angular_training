@@ -1,0 +1,68 @@
+<img class="image" src="">
+
+<div class="card m-3">
+    <h5 class="card-header">Form Submission {{companyname}}</h5>
+    <div class="card-body">
+        <form name="form" #f="ngForm" (ngSubmit)="onSubmit(f.value);f.reset()" novalidate>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label>Title</label>
+                    <select name="title" class="form-control" [(ngModel)]="model.title" #title="ngModel" [ngClass]="{ 'is-invalid':  title.invalid }">
+                        <option value=""></option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Ms">Ms</option>
+                    </select>
+                    <div *ngIf="title.touched && title.invalid" class="invalid-feedback">
+                        <div *ngIf="title.errors">Title is required</div>
+                    </div>
+                </div>
+                <div class="form-group col-5">
+                    <label>First Name</label>
+                    <input type="text" name="firstName" class="form-control" [(ngModel)]="model.firstName" #firstName="ngModel" [ngClass]="{ 'is-invalid': firstName.touched && firstName.pristine }" required>
+                    <div *ngIf="firstName.touched " class="invalid-feedback">
+                        <div *ngIf="firstName.errors">First Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group col-5">
+                    <label>Last Name</label>
+                    <input type="text" name="lastName" class="form-control" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid':  lastName.touched && lastName.pristine }">
+                    <div *ngIf=" lastName.touched" class="invalid-feedback">
+                        <div *ngIf="lastName.errors">Last Name is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" name="email" class="form-control" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': email.touched && email.invalid }" required email>
+                <div *ngIf="email.touched && email.invalid" class="invalid-feedback">
+                    <div *ngIf="email.touched">Email is required</div>
+                    <div *ngIf="email.errors.email">Email must be a valid email address</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label>Educational Qualification</label>
+                    <input type="text" name="qualification" class="form-control" [(ngModel)]="model.qualification" #qualification="ngModel" [ngClass]="{ 'is-invalid': qualification.touched && qualification.pristine}" required>
+                    <div *ngIf="qualification.invalid" class="invalid-feedback">
+                        <div *ngIf="qualification.touched">Qualification details is required</div>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label>Experience</label>
+                    <input type="text" name="experience" class="form-control" [(ngModel)]="model.experience" #experience="ngModel" [ngClass]="{ 'is-invalid': experience.touched && experience.pristine }" required>
+                    <div *ngIf="experience.invalid" class="invalid-feedback">
+                        <div *ngIf="experience.errors">Experience is required</div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary mr-1" [disabled]="f.invalid" type="submit">Register</button>
+
+            </div>
+        </form>
+    </div>
+</div>
